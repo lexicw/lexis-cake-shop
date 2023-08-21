@@ -1,7 +1,75 @@
 <template>
+  <div class="btn-container">
     <button
-      class="bg-pink-300 hover:bg-pink-200 text-black font-semibold py-4 px-12 mt-3 font-bold"
+      class="btn bg-pink-400 hover:bg-pink-300 ease-in duration-200 text-black font-semibold text-lg py-4 px-12 mt-3 font-bold uppercase"
+      @keypress="handleClick"
+      @click="handleClick"
     >
       View Details
+      <span v-if="showRipple" class="ripple" :style="rippleStyle"></span>
     </button>
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      showRipple: false,
+      rippleStyle: {},
+    };
+  },
+  methods: {
+    handleClick(event) {
+      if (this.showRipple) {
+        return;
+      }
+
+      const buttonRect = event.currentTarget.getBoundingClientRect();
+      const rippleSize = Math.max(buttonRect.width, buttonRect.height);
+
+      this.rippleStyle = {
+        width: `${rippleSize}px`,
+        height: `${rippleSize}px`,
+        left: `${event.clientX - buttonRect.left - rippleSize / 2}px`,
+        top: `${event.clientY - buttonRect.top - rippleSize / 2}px`,
+      };
+
+      this.showRipple = true;
+
+      setTimeout(() => {
+        this.showRipple = false;
+      }, 800);
+    },
+  },
+};
+</script>
+
+<style scoped>
+.btn {
+  white-space: normal;
+  overflow: hidden;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  position: relative; /* Ensure that the ripple is positioned relative to the button */
+}
+
+.ripple {
+  background: radial-gradient(circle, rgba(255, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: animate 1s linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+</style>

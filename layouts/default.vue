@@ -1,12 +1,12 @@
 <template>
     <body class="bg-gray-100">
-      <nav class="bg-white fixed top-0 left-0 shadow-md px-4 py-0 flex justify-center items-center z-10 w-full h-32 overflow-hidden">
-        <ul class="flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-xl">
+      <nav class="bg-white fixed top-0 left-0 shadow-md px-4 py-0 flex justify-center items-center z-10 w-full overflow-hidden" style="height:7.6rem;">
+        <ul class="flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-lg">
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center">Home</a>
+            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center">Menu</a>
+            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Menu</a>
           </li>
           <li>
             <a href="#" class="">
@@ -14,10 +14,10 @@
             </a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center">About</a>
+            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">About</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center">Contact</a>
+            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Contact</a>
           </li>
         </ul>
       </nav>

@@ -1,4 +1,5 @@
 <template>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <div class="carousel-container">
       <div class="carousel">
         <div class="carousel-overlay"></div>
@@ -11,19 +12,23 @@
             ></div>
           </transition>
           <div class="overlay-text">
-              <h1 class="text-6xl">Lorem Ipsum</h1>
-              <p class="text-2xl mt-3">Here's some content over the image.</p>
+              <h1 class="text-6xl" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
+              <p class="text-2xl mt-3" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum Dolor</p>
+              <div><PinkButton /></div>
             </div>
         </div>
       </div>
       <div class="carousel-controls flex justify-between mt-2">
-        <button @click="prevSlide" class="text-2xl">&lt;</button>
-        <button @click="nextSlide" class="text-2xl">&gt;</button>
+        <button @click="prevSlide"><span class="material-symbols-outlined arrow-back">arrow_back_ios</span></button>
+        <button @click="nextSlide"><span class="material-symbols-outlined arrow-forward">arrow_forward_ios</span></button>
       </div>
     </div>
   </template>
   
   <script>
+  import AOS from 'aos';
+  import 'aos/dist/aos.css'; // Import the CSS
+
   export default {
     data() {
       return {
@@ -44,6 +49,10 @@
         this.currentIndex = (this.currentIndex + 1) % this.items.length;
       },
     },
+    mounted() {
+    // Initialize AOS when the component is mounted
+    AOS.init();
+    },
   };
   </script>
   
@@ -57,6 +66,7 @@
   
   .carousel {
     position: relative; /* Ensure relative positioning for the carousel */
+    background-color: #000;
   }
   
   .carousel-item {
@@ -83,13 +93,13 @@ background: linear-gradient(180deg, rgba(249,168,212,0) 50%, rgba(249,168,212,0.
   bottom: 10%;
   left: 10%;
   transform: translate(-0%, -50%);
-  text-align: center;
   color: white;
   z-index: 2; /* Place the text above the background and overlay */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
   .carousel-background {
-    background-attachment: fixed;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,13 +119,39 @@ background: linear-gradient(180deg, rgba(249,168,212,0) 50%, rgba(249,168,212,0.
   .fade-enter-to {
     opacity: 1;
   }
+
+  .carousel-controls {
+    z-index: 2;
+  }
   
   .carousel-controls button {
     background: none;
     border: none;
-    font-size: 20px;
     cursor: pointer;
+    color: white;
   }
 
+  .arrow-back, .arrow-forward {
+    font-size: 3rem !important;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+
+  .carousel-container:hover .arrow-back, .carousel-container:hover .arrow-forward  {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  .arrow-back {
+    left: 5%;
+  }
+
+  .arrow-forward {
+    right: 5%;
+  }
 
   </style>
