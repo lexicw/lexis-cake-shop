@@ -37,7 +37,7 @@
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Contact</a>
           </li>
         </ul>
-        <a href="#" class="absolute top-4 right-3 p-4"><span class="material-symbols-outlined search-icon">search</span></a>
+        <a href="#" class="absolute top-3 lg:top-5 right-4 p-4"><span class="material-symbols-outlined search-icon">search</span></a>
       </nav>
 
 <div class="logo-div bg-transparent fixed top-75 left-1/2 z-20" :class="{ 'shrunk': isMenuShrunk }" ref="logoDiv">
