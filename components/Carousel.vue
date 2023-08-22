@@ -12,7 +12,7 @@
             ></div>
           </transition>
           <div class="overlay-text">
-              <h1 class="text-3xl lg:text-6xl" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
+              <h1 class="text-3xl lg:text-7xl font-bold" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
               <p class="text-xl lg:text-2xl mt-1 lg:mt-3" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum Dolor</p>
               <div><PinkButton text="Learn More" /></div>
             </div>
@@ -34,7 +34,7 @@
     data() {
       return {
         items: [
-          { id: 1, image: '/images/elegant-cake.webp' },
+          { id: 1, image: '/images/wedding-cake.webp' },
           { id: 2, image: '/images/misc-cupcakes.webp' },
           { id: 3, image: '/images/yummy-cake.webp' },
           // Add more items as needed
@@ -94,12 +94,11 @@
 
  .overlay-text {
   position: absolute;
-  bottom: 5%;
-  left: 15%;
+  bottom: 4%;
+  left: 10%;
   transform: translate(-0%, -50%);
   color: white;
   z-index: 2; /* Place the text above the background and overlay */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
   .carousel-background {

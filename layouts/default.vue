@@ -1,4 +1,5 @@
 <template>
+  
     <body>
       <nav :class="[
       'main-menu',
@@ -18,7 +19,7 @@
       { 'shrunk': isMenuShrunk }
     ]">
     <a href="#" class="absolute top-3 left-4 lg:hidden p-4"><span class="material-symbols-outlined hamburger-menu">menu</span></a>
-        <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-lg">
+        <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-md">
           <li>
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
           </li>
@@ -108,6 +109,7 @@ export default {
 }
  body {
     padding-top: 45px;
+    font-family: 'PT Sans', sans-serif;
  }
 
  .logo-div {
