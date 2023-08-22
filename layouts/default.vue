@@ -17,7 +17,7 @@
       'overflow-hidden',
       { 'shrunk': isMenuShrunk }
     ]">
-        <ul class="nav-items flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-lg">
+        <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-lg">
           <li>
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
           </li>
@@ -170,8 +170,5 @@ export default {
     top: 55px;
  }
 
- .nav-items {
-  display: none;
- }
 }
 </style>
