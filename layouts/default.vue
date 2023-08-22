@@ -37,9 +37,11 @@
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Contact</a>
           </li>
         </ul>
+        <a href="#" class="absolute top-4 right-3 p-4"><span class="material-symbols-outlined search-icon">search</span></a>
       </nav>
+
 <div class="logo-div bg-transparent fixed top-75 left-1/2 z-20" :class="{ 'shrunk': isMenuShrunk }" ref="logoDiv">
-  <a href="#" class="flex items-center">
+  <a href="#" class="flex items-center" tabindex="-1">
     <img
       src="/images/cakeshop-logo.svg"
       alt="Logo"
@@ -155,6 +157,10 @@ export default {
 .nav-items a:hover::before,
 .nav-items a:hover::after {
   transform: scale(1);
+}
+
+.material-symbols-outlined.search-icon {
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 950px) {
