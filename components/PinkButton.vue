@@ -5,7 +5,7 @@
       @keypress="handleClick"
       @click="handleClick"
     >
-      View Details
+      {{ text }}
       <span v-if="showRipple" class="ripple" :style="rippleStyle"></span>
     </button>
   </div>
@@ -13,6 +13,9 @@
 
 <script>
 export default {
+  props: {
+    text: String
+  },
   data() {
     return {
       showRipple: false,
