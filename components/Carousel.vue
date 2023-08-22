@@ -12,8 +12,8 @@
             ></div>
           </transition>
           <div class="overlay-text">
-              <h1 class="text-6xl" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
-              <p class="text-2xl mt-3" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum Dolor</p>
+              <h1 class="text-3xl lg:text-6xl" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
+              <p class="text-xl lg:text-2xl mt-1 lg:mt-3" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum Dolor</p>
               <div><PinkButton /></div>
             </div>
         </div>
@@ -103,7 +103,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  aspect-ratio: 16 / 7;
   width: 100%;
 }
   
@@ -132,7 +132,7 @@
   }
 
   .arrow-back, .arrow-forward {
-    font-size: 3rem !important;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     opacity: 0;
@@ -154,4 +154,45 @@
     right: 5%;
   }
 
+  @media screen and (max-width: 1700px) {
+    .carousel-background {
+        aspect-ratio: 15 / 7;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .carousel-background {
+        aspect-ratio: 3 / 2;
+    }
+  }
+
+@media screen and (max-width: 950px) {
+    .carousel-item {
+    justify-content: bottom;
+    align-items: bottom;
+  }
+  .carousel-background {
+    background-attachment: scroll;
+    aspect-ratio: 4 / 3;
+    background-position: bottom;
+}
+ .overlay-text {
+  bottom: 0%;
+  left: 12%;
+  transform: translate(-0%, -10%);
+  }
+    .arrow-back, .arrow-forward {
+    font-size: 2rem;
+    opacity: 1;
+    transform: translateY(-50%);
+    top: 45%;
+  }
+    .arrow-back {
+    left: 3%;
+  }
+
+  .arrow-forward {
+    right: 3%;
+  }
+}
   </style>

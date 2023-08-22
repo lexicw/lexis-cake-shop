@@ -155,4 +155,23 @@ export default {
 .nav-items a:hover::after {
   transform: scale(1);
 }
+
+@media screen and (max-width: 950px) {
+.main-menu {
+  height: 5.6rem;
+}
+
+.fixed-logo {
+    width: 11rem;
+    height: 8rem;
+}
+
+  .logo-div {
+    top: 55px;
+ }
+
+ .nav-items {
+  display: none;
+ }
+}
 </style>
