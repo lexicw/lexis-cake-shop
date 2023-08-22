@@ -79,19 +79,19 @@
 
  .carousel-overlay {
     position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-background: linear-gradient(180deg, rgba(249,168,212,0) 50%, rgba(249,168,212,0.4) 100%);
-  pointer-events: none;
-  z-index: 1; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(249,168,212,0) 50%, rgba(249,168,212,0.4) 100%);
+    pointer-events: none;
+    z-index: 1; 
  }
 
  .overlay-text {
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 5%;
+  left: 15%;
   transform: translate(-0%, -50%);
   color: white;
   z-index: 2; /* Place the text above the background and overlay */

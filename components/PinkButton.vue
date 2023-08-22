@@ -1,7 +1,7 @@
 <template>
   <div class="btn-container">
     <button
-      class="btn bg-pink-400 hover:bg-pink-300 ease-in duration-200 text-black font-semibold text-lg py-4 px-12 mt-3 font-bold uppercase"
+      class="btn bg-pink-300 hover:bg-pink-200 ease-in duration-200 text-black font-semibold text-lg py-4 px-12 mt-3 font-bold uppercase"
       @keypress="handleClick"
       @click="handleClick"
     >
