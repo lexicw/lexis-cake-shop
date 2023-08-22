@@ -51,6 +51,7 @@ export default {
   overflow: hidden;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   position: relative; /* Ensure that the ripple is positioned relative to the button */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ripple {

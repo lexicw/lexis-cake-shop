@@ -1,5 +1,5 @@
 <template>
-    <body class="bg-gray-100">
+    <body>
       <nav :class="[
       'main-menu',
       'bg-white',
@@ -17,6 +17,7 @@
       'overflow-hidden',
       { 'shrunk': isMenuShrunk }
     ]">
+    <a href="#" class="absolute top-3 left-4 lg:hidden p-4"><span class="material-symbols-outlined">menu</span></a>
         <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-lg">
           <li>
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
