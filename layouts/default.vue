@@ -1,6 +1,6 @@
 <template>
   
-    <body>
+    <div>
       <nav :class="[
       'main-menu',
       'bg-white',
@@ -59,12 +59,12 @@
       <main>
         <slot />
       </main>
-    </body>
+    </div>
 </template>
 
 <script>
 import AOS from 'aos';
-  import 'aos/dist/aos.css'; // Import the CSS
+import 'aos/dist/aos.css'; // Import the CSS
 
 export default {
   data() {
@@ -92,6 +92,10 @@ export default {
 </script>
 
 <style>
+ body {
+    padding-top: 7.6rem;
+    font-family: 'PT Sans', sans-serif;
+ }
 .main-menu {
   height: 7.6rem;
   transition: height 0.6s ease; /* Add a smooth transition */
@@ -113,10 +117,6 @@ export default {
     height: 8rem;
     transition: height 0.6s ease;
 }
- body {
-    padding-top: 45px;
-    font-family: 'PT Sans', sans-serif;
- }
 
  .fancy-font {
   font-family: 'Caveat', sans-serif;
@@ -189,6 +189,10 @@ export default {
 .main-menu {
   height: 5.6rem;
 }
+
+ body {
+    padding-top: 5.6rem;
+ }
 
 .fixed-logo {
     width: 11rem;
