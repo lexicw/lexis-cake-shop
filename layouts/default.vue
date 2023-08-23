@@ -4,7 +4,6 @@
       <nav :class="[
       'main-menu',
       'bg-white',
-      'fixed',
       'top-0',
       'left-0',
       'shadow-md',
@@ -19,7 +18,7 @@
       { 'shrunk': isMenuShrunk }
     ]">
     <MobileMenu />
-        <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-md">
+        <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-md" :class="{ 'shrunk': isMenuShrunk }">
           <li>
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
           </li>
@@ -27,9 +26,9 @@
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Menu</a>
           </li>
           <li>
-            <a href="#" class="">
-              <img src="/images/cakeshop-logo.svg" alt="Logo" class="w-48 h-48 my-2" style="visibility: hidden;" />
-            </a>
+            <span class="">
+              <img src="/images/cakeshop-logo.svg" alt="Logo" class="w-48 h-0 my-2" style="visibility: hidden;" />
+            </span>
           </li>
           <li>
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">About</a>
@@ -94,19 +93,24 @@ export default {
 <style>
  body {
     font-family: 'PT Sans', sans-serif;
-    padding-top: 5.6rem;
  }
 
-.main-menu {
-  height: 7.6rem;
-  transition: height 0.6s ease; /* Add a smooth transition */
-  overflow-anchor: none;
+ .main-menu {
+  position: sticky;
 }
 
-.main-menu.shrunk {
-  height: 5.6rem;
-  transition: height 0.6s ease;
+.nav-items {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  transition: all 0.6s ease;
 }
+
+.nav-items.shrunk {
+  padding-top: 34px;
+  padding-bottom: 34px;
+  transition: all 0.6s ease;
+}
+
 
 .fixed-logo {
   width: 14rem;
@@ -190,8 +194,13 @@ export default {
 }
 
 @media screen and (max-width: 950px) {
+body {
+  padding-top: 5.6rem;
+}
+
 .main-menu {
-  height: 5.6rem;
+  height: 5.7rem;
+  position: fixed;
 }
 
 .fixed-logo {
