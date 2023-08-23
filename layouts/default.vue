@@ -18,7 +18,7 @@
       'overflow-hidden',
       { 'shrunk': isMenuShrunk }
     ]">
-    <a href="#" class="absolute top-3 left-4 lg:hidden p-4"><span class="material-symbols-outlined hamburger-menu">menu</span></a>
+    <MobileMenu />
         <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-md">
           <li>
             <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
@@ -171,12 +171,18 @@ export default {
   transform: scale(1);
 }
 
+.material-symbols-outlined {
+  color: #FFF;
+}
+
 .material-symbols-outlined.search-icon {
   font-size: 2rem;
+  color: #000;
 }
 
 .material-symbols-outlined.hamburger-menu {
   font-size: 2rem;
+  color: #000;
 }
 
 @media screen and (max-width: 950px) {
