@@ -69,6 +69,8 @@ export default {
   data() {
     return {
       isMenuShrunk: false,
+      prevScrollY: 0, // Store the previous scroll position
+      scrollTimeout: null // To store the timeout ID
     };
   },
   mounted() {
@@ -79,14 +81,24 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll() {
-      if (window.scrollY > 100) {
-        this.isMenuShrunk = true;
-      } else {
-        this.isMenuShrunk = false;
+  handleScroll() {
+    clearTimeout(this.scrollTimeout); // Clear previous timeout
+
+    this.scrollTimeout = setTimeout(() => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY !== this.prevScrollY) {
+        if (currentScrollY > 100) {
+          this.isMenuShrunk = true;
+        } else {
+          this.isMenuShrunk = false;
+        }
+
+        this.prevScrollY = currentScrollY;
       }
-    },
-  },
+    }, 50); // Adjust the debounce time as needed
+  }
+},
 };
 </script>
 
@@ -206,6 +218,12 @@ body {
 .fixed-logo {
     width: 11rem;
     height: 7.5rem;
+}
+
+.fixed-logo.shrunk {
+  padding: 0.5rem;
+    transition: all 0.6s ease;
+
 }
 
   .logo-div {
