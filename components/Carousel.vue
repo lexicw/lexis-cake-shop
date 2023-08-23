@@ -12,7 +12,7 @@
             ></div>
           </transition>
           <div class="overlay-text">
-              <h1 class="text-3xl lg:text-7xl font-bold" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
+              <h1 class="text-4xl lg:text-8xl font-bold fancy-font" data-aos="fade-up" data-aos-duration="1200">Elegance in Every Bite</h1>
               <p class="text-xl lg:text-2xl mt-1 lg:mt-3" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum Dolor</p>
               <div><PinkButton text="Learn More" /></div>
             </div>
@@ -26,8 +26,6 @@
   </template>
   
   <script>
-  import AOS from 'aos';
-  import 'aos/dist/aos.css'; // Import the CSS
   import PinkButton from '@/components/PinkButton.vue';
 
   export default {
@@ -52,11 +50,7 @@
     },
     components: {
       PinkButton
-    },
-    mounted() {
-    // Initialize AOS when the component is mounted
-    AOS.init();
-    },
+    }
   };
   </script>
   

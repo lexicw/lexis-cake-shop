@@ -8,8 +8,12 @@
         <Card title="Other Treats" imageUrl="/images/othersweets.jpg" />
       </div>
     </div>
-    <hr class="border-t-2 my-8" />
+
+    <StripeSection />
+
   </div>
+
+  <hr class="border-t-2 my-8" />
 </template>
 
 <script>
@@ -22,4 +26,4 @@ export default {
 };
 </script>
 
-<hr class="border-t-2 my-8" />
+

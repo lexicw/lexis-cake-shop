@@ -63,6 +63,9 @@
 </template>
 
 <script>
+import AOS from 'aos';
+  import 'aos/dist/aos.css'; // Import the CSS
+
 export default {
   data() {
     return {
@@ -71,6 +74,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    AOS.init();
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -95,6 +99,7 @@ export default {
 
 .main-menu.shrunk {
   height: 5.6rem;
+  transition: height 0.6s ease;
 }
 
 .fixed-logo {
@@ -106,11 +111,16 @@ export default {
 .fixed-logo.shrunk {
     width: 11rem;
     height: 8rem;
+    transition: height 0.6s ease;
 }
  body {
     padding-top: 45px;
     font-family: 'PT Sans', sans-serif;
  }
+
+ .fancy-font {
+  font-family: 'Caveat', sans-serif;
+  }
 
  .logo-div {
     position: fixed;
