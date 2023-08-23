@@ -115,15 +115,15 @@ export default {
 .fixed-logo {
   width: 14rem;
   height: 10rem;
-  transition: height 0.6s ease; /* Add a smooth transition */
+  transition: all 0.6s ease; /* Add a smooth transition */
   overflow: hidden;
   overflow-anchor: none;
 }
 
 .fixed-logo.shrunk {
-    width: 11rem;
-    height: 7.5rem;
-    transition: height 0.6s ease;
+    padding: 25px;
+    transition: all 0.6s ease;
+
 }
 
  .fancy-font {
