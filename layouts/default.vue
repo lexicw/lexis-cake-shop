@@ -93,12 +93,14 @@ export default {
 
 <style>
  body {
-    padding-top: 7.6rem;
     font-family: 'PT Sans', sans-serif;
+    padding-top: 5.6rem;
  }
+
 .main-menu {
   height: 7.6rem;
   transition: height 0.6s ease; /* Add a smooth transition */
+  overflow-anchor: none;
 }
 
 .main-menu.shrunk {
@@ -108,13 +110,15 @@ export default {
 
 .fixed-logo {
   width: 14rem;
-  height: 13rem;
+  height: 10rem;
   transition: height 0.6s ease; /* Add a smooth transition */
+  overflow: hidden;
+  overflow-anchor: none;
 }
 
 .fixed-logo.shrunk {
     width: 11rem;
-    height: 8rem;
+    height: 7.5rem;
     transition: height 0.6s ease;
 }
 
@@ -124,14 +128,14 @@ export default {
 
  .logo-div {
     position: fixed;
-    top: 75px;
+    top: 80px;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.6s ease; 
  }
 
   .logo-div.shrunk {
-    top: 55px;
+    top: 60px;
  }
 
 .nav-items a {
@@ -190,17 +194,13 @@ export default {
   height: 5.6rem;
 }
 
- body {
-    padding-top: 5.6rem;
- }
-
 .fixed-logo {
     width: 11rem;
-    height: 8rem;
+    height: 7.5rem;
 }
 
   .logo-div {
-    top: 55px;
+    top: 60px;
  }
 
 }
