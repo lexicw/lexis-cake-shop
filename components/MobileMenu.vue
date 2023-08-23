@@ -1,13 +1,18 @@
 <template>
-  <div class="absolute top-3 left-4 p-4 block lg:hidden">
+  <div class="absolute top-3 left-4 p-4 block lg:hidden uppercase">
     <div :class="['mobile-menu', { 'mobile-menu-open': isOpen }]">
       <a href="#" class="closebtn" @click="closeMenu">&times;</a>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
       <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
       <a href="#">Contact</a>
     </div>
-    <span class="material-symbols-outlined hamburger-menu" @click="openMenu">menu</span>
+
+    <div class="menu-toggle" @click="openMenu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
   </div>
 </template>
 
@@ -33,7 +38,7 @@ export default {
 <style scoped>
 .mobile-menu {
   height: 100%;
-  width: 0%;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 5.5rem;
@@ -43,11 +48,44 @@ export default {
   transition: all 0.5s;
   padding-top: 60px;
   text-align: center;
-  tranform: translateY(-500px);
+  transform: translate(-100%);
 }
 
 .mobile-menu-open {
-    width: 100%;
+    transform: translate(0%);
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+.menu-toggle {
+  margin-right: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+.mobile-menu-open ~ .menu-toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-open ~ .menu-toggle .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-open ~ .menu-toggle .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu a {
@@ -55,7 +93,6 @@ export default {
   text-decoration: none;
   color: #000;
   display: block;
-  transition: 0.3s;
 }
 
 .mobile-menu a:hover {
