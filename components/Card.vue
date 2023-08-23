@@ -1,5 +1,5 @@
 <template>
-  <a href="#" class="card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-3 sm:mb-0 border m-4 mx-auto text-center relative">
+  <a href="#" class="card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-3 m-6 lg:mx-auto sm:mb-0 border border-gray-500 text-center relative shadow-lg">
     <div class="card-image" :style="{ backgroundImage: `url(${imageUrl})` }"></div>
     <div class="card-content absolute inset-0 flex flex-col justify-end items-center p-4">
       <PinkButton :text="title" />
@@ -56,5 +56,14 @@ export default {
   align-items: center;
   pointer-events: none;
   transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 950px) {
+  .card-content {
+    background-color: rgba(255, 255, 255, 0);
+    }
+    .card-image {
+      transform: scale(1);
+    }
 }
 </style>

@@ -34,8 +34,6 @@
         items: [
           { id: 1, image: '/images/wedding-cake.webp' },
           { id: 2, image: '/images/misc-cupcakes.webp' },
-          { id: 3, image: '/images/yummy-cake.webp' },
-          // Add more items as needed
         ],
         currentIndex: 0,
       };
@@ -64,7 +62,7 @@
   
   .carousel {
     position: relative; /* Ensure relative positioning for the carousel */
-    background-color: #000;
+    background-color: #FFF;
   }
   
   .carousel-item {
@@ -81,7 +79,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(249,168,212,0) 50%, rgba(249,168,212,0.4) 100%);
+    background: linear-gradient(180deg, rgba(249,168,212,0) 50%, rgba(249,168,212,0.5) 100%);
     pointer-events: none;
     z-index: 1; 
  }
