@@ -56,7 +56,7 @@ export default {
   z-index: 1;
   top: 5.5rem;
   left: 0;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,1);
   overflow-x: hidden;
   transition: all 0.5s;
   text-align: center;
