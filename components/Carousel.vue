@@ -18,7 +18,7 @@
             </div>
         </div>
       </div>
-      <div class="carousel-controls flex justify-between mt-2">
+      <div class="carousel-controls flex justify-between">
         <button @click="prevSlide"><span class="material-symbols-outlined arrow-back">arrow_back_ios</span></button>
         <button @click="nextSlide"><span class="material-symbols-outlined arrow-forward">arrow_forward_ios</span></button>
       </div>

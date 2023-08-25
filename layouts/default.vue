@@ -105,10 +105,11 @@ export default {
 <style>
  body {
     font-family: 'PT Sans', sans-serif;
+    padding-top: 5.6rem;
  }
 
  .main-menu {
-  position: sticky;
+  position: fixed;
 }
 
 .nav-items {
@@ -126,16 +127,14 @@ export default {
 
 .fixed-logo {
   width: 14rem;
-  height: 10rem;
   transition: all 0.6s ease; /* Add a smooth transition */
   overflow: hidden;
   overflow-anchor: none;
 }
 
 .fixed-logo.shrunk {
-    padding: 25px;
+    transform: scale(0.7);
     transition: all 0.6s ease;
-
 }
 
  .fancy-font {
@@ -221,8 +220,8 @@ body {
 }
 
 .fixed-logo.shrunk {
-  padding: 0.5rem;
-    transition: all 0.6s ease;
+  transform: none;
+  transition: all 0.6s ease;
 
 }
 

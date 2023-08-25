@@ -1,12 +1,14 @@
 <template>
   <div class="absolute top-3 left-4 p-4 block lg:hidden uppercase">
     <div :class="['mobile-menu', 'text-xl', { 'mobile-menu-open': isOpen }]">
-      <a href="#">Home</a>
-      <a href="#">Menu</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-
-
+    <Transition name="slide-fade">
+      <ul class="mobile-links list-none" v-if="isOpen">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+    </Transition>
     </div>
 
     <button type="button" class="menu-toggle" @click="toggleMenu">
@@ -106,6 +108,20 @@ export default {
   text-decoration: none;
   color: #000;
   display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
+.slide-fade-enter-active {
+  transition: all 1s ease-in-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
 </style>

@@ -8,7 +8,6 @@
         <Card title="Other Treats" imageUrl="/images/othersweets.jpg" />
       </div>
     </div>
-
     <StripeSection />
 
   </div>
