@@ -9,10 +9,7 @@
       </div>
     </div>
     <StripeSection />
-
   </div>
-
-  <hr class="border-t-2 my-8" />
 </template>
 
 <script>

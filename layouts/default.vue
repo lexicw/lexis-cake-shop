@@ -59,6 +59,7 @@
         <slot />
       </main>
     </div>
+    <Footer />
 </template>
 
 <script>
@@ -105,7 +106,9 @@ export default {
 <style>
  body {
     font-family: 'PT Sans', sans-serif;
+    padding: 0;
     padding-top: 5.6rem;
+    margin: 0;
  }
 
  .main-menu {
