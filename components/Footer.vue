@@ -28,7 +28,7 @@
                 </ul>
                 <h3 class="font-bold mt-5">Social Media</h3>
                 <ul>
-                    <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                    <li><a href="#">Facebook</a></li>
                 </ul>
             </div>
             <div class="w-full md:w-1/4 flex flex-col items-center p-4">
