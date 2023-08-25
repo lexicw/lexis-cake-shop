@@ -18,7 +18,7 @@
                 Saturday: 10:00 AM - 4:00 PM<br>
                 Sunday: Closed</p>
             </div>
-            <div class="w-1/2 md:w-1/4 flex flex-col py-4 px-4 lg:px-12">
+            <div class="w-full md:w-1/4 flex flex-col py-4 px-6 lg:px-12 text-center md:text-left">
                 <h3 class="font-bold">Quick Links</h3>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -26,14 +26,12 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <h3 class="font-bold mt-3">Follow Us</h3>
+                <h3 class="font-bold mt-5">Social Media</h3>
                 <ul>
                     <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
                 </ul>
             </div>
-            <div class="w-1/2 md:w-1/4 flex flex-col items-center p-4">
+            <div class="w-full md:w-1/4 flex flex-col items-center p-4">
                 <h3 class="font-bold">Subscribe to our Newsletter</h3>
                 <form class="subscribe-form">
                     <input type="email" placeholder="Your email">
