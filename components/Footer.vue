@@ -34,7 +34,7 @@
             <div class="w-full md:w-1/4 flex flex-col items-center p-4">
                 <h3 class="font-bold">Subscribe to our Newsletter</h3>
                 <form class="subscribe-form">
-                    <input type="email" placeholder="Your email">
+                    <input type="email" placeholder="Email" class="border-2 border-gray-300 px-4 py-2 focus:outline-none focus:border-pink-400 text-black">
                     <PinkButton text="Subscribe" />
                 </form>
             </div>

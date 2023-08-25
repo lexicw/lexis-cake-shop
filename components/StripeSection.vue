@@ -1,7 +1,7 @@
 <template>
 <div class="stripe-bg mt-16">
     <p class="py-32 py-lg-40 text-center text-6xl lg:text-8xl text-white"><div class="fancy-font font-extrabold" data-aos="zoom-in-up" data-aos-duration="1000">Life is uncertain. Eat Dessert first!</div>
-      <WhiteButton text="Contact Us" class="mt-3" />
+      <WhiteButton text="Our Menu" class="mt-3" />
     </p>
   </div>
 </template>
