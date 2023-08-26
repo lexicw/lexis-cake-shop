@@ -43,15 +43,9 @@
 </footer>
 </template>
 
-  <script>
-  import PinkButton from '@/components/PinkButton.vue';
-
-  export default {
-    components: {
-      PinkButton
-    }
-  };
-  </script>
+<script setup>
+import PinkButton from '@/components/PinkButton.vue';
+</script>
 
 <style scoped>
 

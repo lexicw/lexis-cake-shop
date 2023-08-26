@@ -1,7 +1,7 @@
 <template>
   <div class="btn-container">
     <button
-      class="btn bg-white ease-in duration-200 text-black font-extrabold text-lg py-3 lg:py-4 px-8 lg:px-12 mt-3 uppercase"
+      class="btn bg-white ease-in duration-200 text-gray-800 hover:text-black font-extrabold tracking-wider text-lg py-3 lg:py-4 px-8 lg:px-12 mt-3 uppercase"
       @keypress="handleClick"
       @click="handleClick"
     >
@@ -10,10 +10,11 @@
   </div>
 </template>
 
-<script>
-    export default {
-      props: {
-        text: String
-      },
-    };
+<script setup>
+import { defineProps } from 'vue';
+
+// Props from parent component
+const props = defineProps({
+  text: String
+});
 </script>

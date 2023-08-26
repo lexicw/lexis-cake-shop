@@ -2,7 +2,7 @@
   <div class="absolute top-3 left-4 p-4 block lg:hidden uppercase">
     <div :class="['mobile-menu', 'text-xl', { 'mobile-menu-open': isOpen }]">
     <Transition name="slide-fade">
-      <ul class="mobile-links list-none" v-if="isOpen">
+      <ul class="mobile-links list-none text-gray-600" v-if="isOpen">
           <li><a href="#">Home</a></li>
           <li><a href="#">Menu</a></li>
           <li><a href="#">About</a></li>
@@ -20,33 +20,29 @@
 </template>
 
 
-<script>
+<script setup>
+import { ref } from 'vue';
 
-export default {
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      if (this.isOpen) {
-        this.closeMenu();
-      } else {
-        this.openMenu();
-      }
-    },
-    openMenu() {
-      // Implement your openMenu logic here
-      this.isOpen = true;
-      document.body.classList.add("overflow-hidden")
-    },
-    closeMenu() {
-      // Implement your closeMenu logic here
-      this.isOpen = false;
-      document.body.classList.remove("overflow-hidden")
-    }
+const isOpen = ref(false);
+
+const toggleMenu = () => {
+  if (isOpen.value) {
+    closeMenu();
+  } else {
+    openMenu();
   }
+};
+
+const openMenu = () => {
+  // Implement your openMenu logic here
+  isOpen.value = true;
+  document.body.classList.add('overflow-hidden');
+};
+
+const closeMenu = () => {
+  // Implement your closeMenu logic here
+  isOpen.value = false;
+  document.body.classList.remove('overflow-hidden');
 };
 </script>
 
@@ -74,7 +70,7 @@ export default {
 .menu-toggle .bar {
   width: 25px;
   height: 3px;
-  background-color: #000;
+  background-color:  rgb(75 85 99 / 1);
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -106,7 +102,6 @@ export default {
 .mobile-menu a {
   padding: 16px;
   text-decoration: none;
-  color: #000;
   display: block;
   border-bottom: 1px solid rgba(0,0,0,0.15);
 }

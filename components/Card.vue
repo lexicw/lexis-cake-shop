@@ -7,18 +7,14 @@
   </a>
 </template>
 
-<script>
+<script setup>
 import PinkButton from '@/components/PinkButton.vue';
+import { defineProps } from 'vue';
 
-export default {
-  components: {
-    PinkButton
-  },
-  props: {
-    title: String,
-    imageUrl: String
-  }
-};
+const { title, imageUrl } = defineProps({
+  title: String,
+  imageUrl: String
+});
 </script>
 
 <style scoped>

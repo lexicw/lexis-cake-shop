@@ -1,7 +1,7 @@
 <template>
   <div class="btn-container">
     <button
-      class="btn bg-pink-300 hover:bg-pink-200 active:bg-pink-200 ease-in duration-200 text-black font-extrabold text-lg py-3 lg:py-4 px-8 lg:px-12 mt-3 uppercase w-full"
+      class="btn bg-pink-300 hover:bg-pink-200 active:bg-pink-200 ease-in duration-200 text-gray-800 hover:text-black tracking-wider font-extrabold text-md py-3 lg:py-4 px-8 lg:px-12 mt-3 uppercase w-full"
       @keypress="handleClick"
       @click="handleClick"
     >
@@ -11,41 +11,37 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    text: String
-  },
-  data() {
-    return {
-      showRipple: false,
-      rippleStyle: {},
-    };
-  },
-  methods: {
-    handleClick(event) {
-      if (this.showRipple) {
-        return;
-      }
+<script setup>
+import { ref } from 'vue';
 
-      const buttonRect = event.currentTarget.getBoundingClientRect();
-      const rippleSize = Math.max(buttonRect.width, buttonRect.height);
+const showRipple = ref(false);
+const rippleStyle = ref({});
 
-      this.rippleStyle = {
-        width: `${rippleSize}px`,
-        height: `${rippleSize}px`,
-        left: `${event.clientX - buttonRect.left - rippleSize / 2}px`,
-        top: `${event.clientY - buttonRect.top - rippleSize / 2}px`,
-      };
+const handleClick = (event) => {
+  if (showRipple.value) {
+    return;
+  }
 
-      this.showRipple = true;
+  const buttonRect = event.currentTarget.getBoundingClientRect();
+  const rippleSize = Math.max(buttonRect.width, buttonRect.height);
 
-      setTimeout(() => {
-        this.showRipple = false;
-      }, 800);
-    },
-  },
+  rippleStyle.value = {
+    width: `${rippleSize}px`,
+    height: `${rippleSize}px`,
+    left: `${event.clientX - buttonRect.left - rippleSize / 2}px`,
+    top: `${event.clientY - buttonRect.top - rippleSize / 2}px`,
+  };
+
+  showRipple.value = true;
+
+  setTimeout(() => {
+    showRipple.value = false;
+  }, 800);
 };
+
+const props = defineProps({
+  text: String
+});
 </script>
 
 <style scoped>

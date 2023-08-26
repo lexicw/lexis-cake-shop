@@ -25,30 +25,23 @@
     </div>
   </template>
   
-  <script>
+  <script setup>
   import PinkButton from '@/components/PinkButton.vue';
-
-  export default {
-    data() {
-      return {
-        items: [
-          { id: 1, image: '/images/wedding-cake.webp' },
-          { id: 2, image: '/images/misc-cupcakes.webp' },
-        ],
-        currentIndex: 0,
-      };
-    },
-    methods: {
-      prevSlide() {
-        this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
-      },
-      nextSlide() {
-        this.currentIndex = (this.currentIndex + 1) % this.items.length;
-      },
-    },
-    components: {
-      PinkButton
-    }
+  import { ref } from 'vue';
+  
+  const items = ref([
+    { id: 1, image: '/images/wedding-cake.webp' },
+    { id: 2, image: '/images/misc-cupcakes.webp' },
+  ]);
+  
+  const currentIndex = ref(0);
+  
+  const prevSlide = () => {
+    currentIndex.value = (currentIndex.value - 1 + items.value.length) % items.value.length;
+  };
+  
+  const nextSlide = () => {
+    currentIndex.value = (currentIndex.value + 1) % items.value.length;
   };
   </script>
   

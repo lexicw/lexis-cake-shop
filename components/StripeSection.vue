@@ -6,14 +6,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import WhiteButton from '@/components/WhiteButton.vue';
-
-export default {
-  components: {
-    WhiteButton
-  }
-};
 </script>
 
 

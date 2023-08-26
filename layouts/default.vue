@@ -62,45 +62,41 @@
     <Footer />
 </template>
 
-<script>
+<script setup>
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the CSS
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-export default {
-  data() {
-    return {
-      isMenuShrunk: false,
-      prevScrollY: 0, // Store the previous scroll position
-      scrollTimeout: null // To store the timeout ID
-    };
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-    AOS.init();
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-  handleScroll() {
-    clearTimeout(this.scrollTimeout); // Clear previous timeout
+const isMenuShrunk = ref(false);
+const prevScrollY = ref(0);
+const scrollTimeout = ref(null);
 
-    this.scrollTimeout = setTimeout(() => {
-      const currentScrollY = window.scrollY;
+const handleScroll = () => {
+  clearTimeout(scrollTimeout.value); // Clear previous timeout
 
-      if (currentScrollY !== this.prevScrollY) {
-        if (currentScrollY > 100) {
-          this.isMenuShrunk = true;
-        } else {
-          this.isMenuShrunk = false;
-        }
+  scrollTimeout.value = setTimeout(() => {
+    const currentScrollY = window.scrollY;
 
-        this.prevScrollY = currentScrollY;
+    if (currentScrollY !== prevScrollY.value) {
+      if (currentScrollY > 100) {
+        isMenuShrunk.value = true;
+      } else {
+        isMenuShrunk.value = false;
       }
-    }, 50); // Adjust the debounce time as needed
-  }
-},
+
+      prevScrollY.value = currentScrollY;
+    }
+  }, 50); // Adjust the debounce time as needed
 };
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  AOS.init();
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style>
@@ -159,7 +155,6 @@ export default {
 .nav-items a {
   position: relative;
   text-decoration: none;
-  color: #333; /* Adjust the color as needed */
 }
 
 
@@ -199,12 +194,12 @@ export default {
 
 .material-symbols-outlined.search-icon {
   font-size: 2rem;
-  color: #000;
+  color: rgb(75 85 99 / 1);
 }
 
 .material-symbols-outlined.hamburger-menu {
   font-size: 2rem;
-  color: #000;
+  color: rgb(75 85 99 / 1);
 }
 
 @media screen and (max-width: 950px) {
