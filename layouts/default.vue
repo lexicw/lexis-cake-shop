@@ -20,10 +20,10 @@
     <MobileMenu />
         <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-md" :class="{ 'shrunk': isMenuShrunk }">
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Home</a>
+            <a href="#" class="text-gray-600 hover:text-black items-center uppercase">Home</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Menu</a>
+            <a href="#" class="text-gray-600 hover:text-black items-center uppercase">Menu</a>
           </li>
           <li>
             <span class="">
@@ -31,10 +31,10 @@
             </span>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">About</a>
+            <a href="#" class="text-gray-600 hover:text-black items-center uppercase">About</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-gray-800 items-center uppercase">Contact</a>
+            <a href="#" class="text-gray-600 hover:text-black items-center uppercase">Contact</a>
           </li>
         </ul>
         <a href="#" class="absolute top-3 lg:top-5 right-4 p-4"><span class="material-symbols-outlined search-icon">search</span></a>
