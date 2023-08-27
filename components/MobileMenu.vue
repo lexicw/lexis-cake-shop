@@ -36,13 +36,15 @@ const toggleMenu = () => {
 const openMenu = () => {
   // Implement your openMenu logic here
   isOpen.value = true;
-  document.body.classList.add('overflow-hidden');
+  // document.body.classList.add("overflow-hidden")
+  useHead({ bodyAttrs: { style: 'overflow: hidden' }});
 };
 
 const closeMenu = () => {
   // Implement your closeMenu logic here
   isOpen.value = false;
-  document.body.classList.remove('overflow-hidden');
+  useHead({ bodyAttrs: { style: 'overflow: auto' }});
+      // document.body.classList.remove("overflow-hidden")
 };
 </script>
 
