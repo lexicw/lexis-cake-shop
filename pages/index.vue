@@ -9,7 +9,16 @@
       </div>
     </div>
     <StripeSection />
+    <div class="bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap items-center py-3 lg:py-16">
+        <ReviewCard title="First Card Title" content="First Card Content" />
+        <ReviewCard title="Second Card Title" content="Second Card Content" />
+        <ReviewCard title="Third Card Title" content="Third Card Content" />
+      </div>
+    </div>
   </div>
+</div>
 </template>
 
 <script setup>
