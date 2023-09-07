@@ -12,9 +12,9 @@
     <div class="bg-gray-100">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap items-center py-3 lg:py-16">
-        <ReviewCard title="First Card Title" content="First Card Content" />
-        <ReviewCard title="Second Card Title" content="Second Card Content" />
-        <ReviewCard title="Third Card Title" content="Third Card Content" />
+        <ReviewCard title="A Slice of Heaven" content="I couldn't resist the temptation and ordered the Red Velvet Delight. It was moist, decadent, and left me craving for more. Thanks for the heavenly treat!" reviewer="Emily" />
+        <ReviewCard title="Amazing Quality" content="The Chocolate Dream cake I ordered for my birthday was an absolute delight! It was beautifully decorated and tasted like pure perfection. I'm already planning to order another one for my next celebration!" reviewer="David" />
+        <ReviewCard title="A Hidden Gem" content="The Lemon Zest cake I had from here was a citrusy explosion of flavor! I was blown away by the freshness and balance of flavors. This place is a hidden gem for dessert lovers." reviewer="Sarah" />
       </div>
     </div>
   </div>
