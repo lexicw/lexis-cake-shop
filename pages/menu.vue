@@ -2,7 +2,7 @@
     <div class="cafe-photo">
     <div class="text-black menu container p-5">
         <div class="my-2 mx-16">
-            <div class="w-full text-center"><h1 class="text-8xl fancy-font text-black">Lexi's Cake Shop Menu</h1></div>
+            <div class="w-full text-center"><h1 class="text-8xl fancy-font text-pink-500">Our Menu</h1></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mt-4 mx-16">
             <div class="mt-4">
@@ -68,7 +68,7 @@
     bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
     background-size: 240.00px 240.00px;
 }
 
