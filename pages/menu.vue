@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="text-center flex align-middle justify-center w-full px-36 py-10">
-            <img src="/Images/divider.svg" class="block m-auto select-none" />
+            <img src="/images/divider.svg" class="block m-auto select-none" />
             </div>
     </div>
 </div>
