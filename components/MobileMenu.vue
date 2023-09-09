@@ -3,8 +3,8 @@
     <div :class="['mobile-menu', 'text-xl', { 'mobile-menu-open': isOpen }]">
     <Transition name="slide-fade">
       <ul class="mobile-links list-none text-gray-600" v-if="isOpen">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
       </ul>

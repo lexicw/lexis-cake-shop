@@ -20,10 +20,10 @@
     <MobileMenu />
         <ul class="nav-items hidden lg:flex flex items-center space-x-4 lg:space-x-20 ml-6 lg:text-md" :class="{ 'shrunk': isMenuShrunk }">
           <li>
-            <a href="#" class="text-gray-600 hover:text-black items-center uppercase">Home</a>
+            <a href="/" class="text-gray-600 hover:text-black items-center uppercase">Home</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black items-center uppercase">Menu</a>
+            <a href="/menu" class="text-gray-600 hover:text-black items-center uppercase">Menu</a>
           </li>
           <li>
             <span class="">
